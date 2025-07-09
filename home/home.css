@@ -57,6 +57,7 @@ body, html {
     align-items: center;
     box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
     transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 .profile-icon-container:active {
@@ -104,6 +105,7 @@ body, html {
     text-decoration: none;
     transition: all 0.2s ease-in-out;
     display: block;
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 .card:hover, .logout-button:hover {
@@ -215,6 +217,7 @@ body, html {
     color: var(--text-strong-color);
     box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
     transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 .modal-button:active {
