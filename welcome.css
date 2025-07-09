@@ -1,4 +1,4 @@
-/* welcome.css - Estilo Neumórfico */
+/* welcome.css - Estilo Neumórfico Refinado */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* --- VARIÁVEIS DE COR (TEMA CLARO - NEUTRO) --- */
@@ -27,32 +27,54 @@ body, html {
     text-align: center;
     width: 100%;
     height: 100%;
-    padding: 6vw;
+    padding: 24px;
     box-sizing: border-box;
     background-color: var(--bg-color);
 }
 
+/* --- NOVO ÍCONE DE DESTAQUE --- */
+.icon-display {
+    width: 120px;
+    height: 120px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+}
+
+.icon-display i {
+    font-size: 60px;
+    color: var(--text-color);
+    /* Efeito de gravação no ícone */
+    text-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
+}
+
+/* --- TIPOGRAFIA COM TAMANHOS FIXOS --- */
 .title {
-    font-size: 10vw;
+    font-size: 42px;
     color: var(--text-strong-color);
     font-weight: 700;
-    margin-bottom: 1.5vh;
+    margin-bottom: 10px;
 }
 
 .subtitle {
     color: var(--text-color);
-    font-size: 4.5vw;
-    margin-bottom: 8vh;
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 300px;
 }
 
-/* --- ANIMAÇÃO DOS BOTÕES (Mantida como estava) --- */
+/* --- ANIMAÇÃO DOS BOTÕES --- */
 .button-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -61,20 +83,19 @@ body, html {
     transform: translateY(0);
 }
 
-
-/* --- BOTÕES COM ESTILO NEUMÓRFICO --- */
+/* --- BOTÕES COM PROPORÇÕES FIXAS --- */
 .button, .button-outline {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2.5vh 0;
-    border-radius: 20px;
-    margin-bottom: 3vh;
-    font-size: 4.5vw;
+    padding: 18px 0;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
     font-weight: 600;
     text-decoration: none;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 350px;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
 }
@@ -107,21 +128,4 @@ body, html {
 
 .button-outline:active {
     box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
-}
-
-
-/* Ajustes para telas maiores */
-@media (min-width: 768px) {
-    .title {
-        font-size: 64px;
-    }
-    .subtitle {
-        font-size: 24px;
-    }
-    .button, .button-outline {
-        font-size: 18px;
-        padding: 20px 0;
-        margin-bottom: 25px;
-        border-radius: 15px;
-    }
 }
