@@ -27,9 +27,9 @@ body, html {
     transform: translateY(0);
 }
 
-/* Ícone do Perfil - agora posicionado corretamente */
+/* Ícone do Perfil - ALTERAÇÃO FEITA AQUI */
 .profile-icon-container {
-    position: fixed; /* Posição fixa na tela */
+    position: absolute; /* Posição absoluta para rolar com a página */
     top: 20px;
     right: 20px;
     z-index: 10;
@@ -119,7 +119,7 @@ body, html {
     background-color: #dee2e6;
 }
 
-/* Estilos do Modal (sem alterações, mas agora funcionará corretamente) */
+/* Estilos do Modal */
 .modal-overlay {
     position: fixed;
     top: 0;
