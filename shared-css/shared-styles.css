@@ -1,12 +1,23 @@
-/* shared-styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+/* shared-styles.css - Estilo Neumórfico */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* --- VARIÁVEIS DE COR (TEMA CLARO - NEUTRO) --- */
+:root {
+    --bg-color: #F0F2F5;
+    --text-color: #5f677A;
+    --text-strong-color: #31344B;
+    --text-light-color: #6b7280;
+    --shadow-light: #FFFFFF;
+    --shadow-dark: #D2D6DB;
+}
+
+/* --- ESTILOS GERAIS --- */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #fff;
-    color: #111827;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .safe-area {
@@ -19,29 +30,38 @@ body, html {
     margin-bottom: 20px;
 }
 
+/* --- BOTÃO DE VOLTAR --- */
 .back-button {
     display: inline-flex;
-    align-items: center;
     justify-content: center;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     margin-bottom: 15px;
-    color: #111827;
+    color: var(--text-strong-color);
     text-decoration: none;
+    border: none;
+    background: var(--bg-color);
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+    transition: all 0.2s ease-in-out;
+}
+.back-button:active {
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
 }
 
+/* --- TÍTULOS --- */
 .title {
     font-size: 26px;
-    font-weight: bold;
-    color: #111827;
+    font-weight: 700;
+    color: var(--text-strong-color);
     margin: 0;
 }
 
 .subtitle {
     font-size: 16px;
-    color: #6b7280;
+    color: var(--text-light-color);
     margin-top: 4px;
     margin-bottom: 20px;
 }
@@ -52,13 +72,14 @@ body, html {
     height: 100%;
 }
 
+/* --- SPINNER DE LOADING --- */
 .loading-spinner {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #111827;
+    border: 5px solid var(--shadow-dark); /* Cor de fundo do spinner */
+    border-top: 5px solid var(--text-strong-color); /* Cor da parte que gira */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -74,11 +95,11 @@ body, html {
 .empty-container {
     text-align: center;
     padding: 50px 0;
-    color: #9ca3af;
+    color: var(--text-light-color);
     font-size: 16px;
 }
 
-/* Estilos para cards de listagem */
+/* --- ESTILOS PARA CARDS DE LISTAGEM --- */
 .list {
     list-style: none;
     padding: 0;
@@ -86,14 +107,15 @@ body, html {
 }
 
 .card {
-    background-color: #f9fafb;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 12px;
-    border: 1px solid #e5e7eb;
+    background: var(--bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 10px 10px 20px var(--shadow-dark), -10px -10px 20px var(--shadow-light);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: none;
 }
 
 .card-text-container {
@@ -103,19 +125,34 @@ body, html {
 
 .card-title {
     font-size: 18px;
-    font-weight: bold;
-    color: '#1f2937';
+    font-weight: 600;
+    color: var(--text-strong-color);
 }
 
 .card-detail {
     font-size: 14px;
-    color: #4b5563;
+    color: var(--text-color);
     margin-top: 4px;
 }
 
 .card-user {
     font-size: 14px;
-    color: #6b7280;
+    color: var(--text-light-color);
     font-style: italic;
     margin-top: 8px;
+}
+
+/* --- DARK MODE --- */
+body.dark-mode {
+    --bg-color: #2C2C2C;
+    --text-color: #a1a1a1;
+    --text-strong-color: #e4e4e4;
+    --text-light-color: #888888;
+    --shadow-light: #3a3a3a;
+    --shadow-dark: #1e1e1e;
+}
+
+body.dark-mode .loading-spinner {
+    border-color: var(--shadow-dark);
+    border-top-color: var(--text-strong-color);
 }
