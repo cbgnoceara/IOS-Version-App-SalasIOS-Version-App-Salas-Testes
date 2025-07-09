@@ -1,12 +1,22 @@
-/* Importa uma fonte similar à do sistema para melhor aparência */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* welcome.css - Estilo Neumórfico */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* --- VARIÁVEIS DE COR (TEMA CLARO - NEUTRO) --- */
+:root {
+    --bg-color: #F0F2F5;
+    --text-color: #5f677A;
+    --text-strong-color: #31344B;
+    --shadow-light: #FFFFFF;
+    --shadow-dark: #D2D6DB;
+}
+
+/* --- ESTILOS GERAIS --- */
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -14,90 +24,104 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
     height: 100%;
     padding: 6vw;
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
-    background-color: #fff;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
 }
 
 .title {
-    font-size: 8vw;
-    color: #111827;
-    font-weight: bold;
+    font-size: 10vw;
+    color: var(--text-strong-color);
+    font-weight: 700;
     margin-bottom: 1.5vh;
 }
 
 .subtitle {
-    color: #6b7280;
+    color: var(--text-color);
     font-size: 4.5vw;
-    margin-bottom: 5vh;
-    text-align: center;
+    margin-bottom: 8vh;
 }
 
+/* --- ANIMAÇÃO DOS BOTÕES (Mantida como estava) --- */
 .button-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* Estado inicial para a animação (invisível e deslocado para baixo) */
     opacity: 0;
     transform: translateY(50px);
-    
-    /* Define a transição para a animação */
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* Estado final da animação (será ativado via JS) */
 .button-container.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+
+/* --- BOTÕES COM ESTILO NEUMÓRFICO --- */
 .button, .button-outline {
-    display: inline-block;
-    padding: 2vh 25vw; /* padding vertical e horizontal */
-    border-radius: 12px;
-    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5vh 0;
+    border-radius: 20px;
+    margin-bottom: 3vh;
     font-size: 4.5vw;
     font-weight: 600;
     text-decoration: none;
-    text-align: center;
-    width: 80%; /* Ajustado para melhor controle */
-    max-width: 400px; /* Largura máxima para telas grandes */
+    width: 90%;
+    max-width: 400px;
     box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
 }
 
+/* Botão Principal: "Saltado" (Extruded) */
 .button {
-    background-color: #111827;
-    color: #fff;
+    background: var(--bg-color);
+    color: var(--text-strong-color);
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
 }
 
-.button-outline {
-    border: 1.5px solid #111827;
-    color: #111827;
-    background-color: transparent;
-}
-
-/* Adiciona um efeito hover para melhor interatividade */
 .button:hover {
-    opacity: 0.9;
+    box-shadow: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
+}
+
+.button:active {
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+}
+
+/* Botão Secundário: "Pressionado" (Inset) */
+.button-outline {
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
 }
 
 .button-outline:hover {
-    background-color: #f0f0f0;
+    box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
 }
 
-/* Ajustes para telas maiores para que não fique desproporcional */
+.button-outline:active {
+    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+}
+
+
+/* Ajustes para telas maiores */
 @media (min-width: 768px) {
     .title {
-        font-size: 60px;
+        font-size: 64px;
     }
     .subtitle {
         font-size: 24px;
     }
     .button, .button-outline {
         font-size: 18px;
+        padding: 20px 0;
+        margin-bottom: 25px;
+        border-radius: 15px;
     }
 }
