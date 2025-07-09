@@ -2,11 +2,11 @@
 
 /* --- :ROOT VARIABLES --- */
 :root {
-    --bg-color: #E0E5EC;
+    --bg-color: #F0F2F5;
     --text-color: #5f677A;
     --text-strong-color: #31344B;
-    --shadow-light: rgba(255, 255, 255, 0.7);
-    --shadow-dark: #a3b1c6;
+    --shadow-light: #FFFFFF;
+    --shadow-dark: #D2D6DB;
     --accent-color: #2462F2;
 }
 
