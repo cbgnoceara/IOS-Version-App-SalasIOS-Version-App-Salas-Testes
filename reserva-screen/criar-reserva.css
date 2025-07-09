@@ -1,19 +1,15 @@
-/* criar-reserva.css - Estilo Neumórfico com Cor de Destaque */
+/* criar-reserva.css - Estilo Neumórfico com Paleta Neutra */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* --- VARIÁVEIS DE COR (TEMA CLARO) --- */
+/* --- VARIÁVEIS DE COR (TEMA CLARO - NEUTRO) --- */
 :root {
-    --bg-color: #F0F0F0;
-    --text-color: #555555;
-    --text-strong-color: #333333;
+    --bg-color: #F0F2F5;
+    --text-color: #5f677A;
+    --text-strong-color: #31344B;
     --text-light-color: #6b7280;
     --placeholder-color: #9ca3af;
-    --shadow-light: #ffffff;
-    --shadow-dark: #c4c4c4;
-    
-    /* NOVA COR DE DESTAQUE */
-    --accent-color: #007AFF; 
-    --accent-text-color: #FFFFFF;
+    --shadow-light: #FFFFFF;
+    --shadow-dark: #D2D6DB;
 }
 
 /* --- ESTILOS GERAIS --- */
@@ -42,8 +38,7 @@ body, html {
     height: 50px;
     margin-top: 10px;
     margin-bottom: 20px;
-    /* APLICA A COR DE DESTAQUE */
-    color: var(--accent-color);
+    color: var(--text-strong-color); /* Usa a cor de texto forte */
     text-decoration: none;
     border: none;
     background: var(--bg-color);
@@ -59,7 +54,7 @@ body, html {
 /* --- TÍTULOS --- */
 .title {
     font-size: 28px;
-    font-weight: 700; /* Mais peso para o título */
+    font-weight: 700;
     color: var(--text-strong-color);
 }
 
@@ -111,11 +106,10 @@ body, html {
     box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
 }
 
-/* TEXTO SELECIONADO AGORA FICA AZUL */
 .input-text {
     font-size: 16px;
     font-weight: 500;
-    color: var(--accent-color);
+    color: var(--text-strong-color); /* Usa a cor de texto forte */
 }
 
 .placeholder-text {
@@ -132,31 +126,29 @@ body, html {
     width: 100%;
 }
 
-/* --- BOTÃO PRINCIPAL COM COR --- */
+/* --- BOTÃO PRINCIPAL (AGORA NEUTRO) --- */
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* APLICA A COR DE DESTAQUE */
-    background-color: var(--accent-color);
-    color: var(--accent-text-color);
+    background-color: var(--bg-color); /* Fundo igual aos outros elementos */
+    color: var(--text-strong-color); /* Cor de texto forte */
     padding: 16px;
     border-radius: 12px;
     margin-top: 10px;
     border: none;
     cursor: pointer;
-    box-shadow: 4px 4px 10px var(--shadow-dark); /* Sombra mais sutil para botão colorido */
+    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light); /* Efeito 3D padrão */
     transition: all 0.2s ease-in-out;
 }
 .button:active {
-    transform: translateY(1px);
-    box-shadow: 2px 2px 5px var(--shadow-dark);
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light); /* Efeito pressionado */
 }
 .button:disabled {
-    background-color: #d1d5db; /* Cinza claro para desabilitado */
-    color: #9ca3af;
-    box-shadow: none;
+    background-color: var(--bg-color);
+    color: var(--placeholder-color);
+    box-shadow: inset 3px 3px 7px var(--shadow-dark), inset -3px -3px 7px var(--shadow-light); /* Efeito desabilitado */
     cursor: not-allowed;
 }
 
@@ -168,8 +160,8 @@ body, html {
 .spinner {
     width: 20px;
     height: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-top-color: #fff;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-top-color: var(--text-strong-color);
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -220,8 +212,7 @@ body, html {
     font-weight: 600;
     text-align: center;
     margin: 15px 0;
-    /* APLICA A COR DE DESTAQUE */
-    color: var(--accent-color);
+    color: var(--text-strong-color); /* Usa a cor de texto forte */
 }
 .modal-list {
     list-style: none;
@@ -237,9 +228,8 @@ body, html {
     border-radius: 8px;
     margin: 2px 0;
 }
-/* EFEITO DE HOVER MELHORADO */
 .modal-item:hover {
-    background-color: rgba(0, 122, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.05); /* Efeito de hover neutro */
 }
 .modal-item-text {
     font-size: 16px;
@@ -266,19 +256,16 @@ body, html {
 /* --- DARK MODE --- */
 body.dark-mode {
     --bg-color: #2C2C2C;
-    --text-color: #cccccc;
-    --text-strong-color: #eeeeee;
+    --text-color: #a1a1a1;
+    --text-strong-color: #e4e4e4;
     --text-light-color: #888888;
     --placeholder-color: #888888;
     --shadow-light: #3a3a3a;
     --shadow-dark: #1e1e1e;
-    
-    /* COR DE DESTAQUE PARA O TEMA ESCURO */
-    --accent-color: #0A84FF;
 }
 
 body.dark-mode .button:disabled {
-    background-color: #444;
-    color: #888;
-    box-shadow: none;
+    background-color: var(--bg-color);
+    color: #555;
+    box-shadow: inset 3px 3px 7px var(--shadow-dark), inset -3px -3px 7px var(--shadow-light);
 }
