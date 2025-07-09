@@ -1,5 +1,5 @@
 /* welcome.css - Estilo Neumórfico Refinado */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap)');
 
 /* --- VARIÁVEIS DE COR (TEMA CLARO - NEUTRO) --- */
 :root {
@@ -43,6 +43,7 @@ body, html {
     align-items: center;
     margin-bottom: 40px;
     box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 .icon-display i {
@@ -98,6 +99,7 @@ body, html {
     max-width: 350px;
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 /* Botão Principal: "Saltado" (Extruded) */
@@ -128,4 +130,20 @@ body, html {
 
 .button-outline:active {
     box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+}
+
+/* Ajustes para telas maiores */
+@media (min-width: 768px) {
+    .title {
+        font-size: 64px;
+    }
+    .subtitle {
+        font-size: 24px;
+    }
+    .button, .button-outline {
+        font-size: 18px;
+        padding: 20px 0;
+        margin-bottom: 25px;
+        border-radius: 15px;
+    }
 }

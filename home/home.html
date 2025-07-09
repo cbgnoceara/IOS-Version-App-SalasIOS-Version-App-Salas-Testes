@@ -6,6 +6,10 @@
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/css/style-toggle.css">
+    <script src="/js/theme-manager.js"></script>
+    
 </head>
 <body>
 
@@ -37,10 +41,20 @@
         <button id="logout-button" class="logout-button">Sair</button>
     </main>
 
-    <button id="profile-button" class="profile-icon-container">
-        <img id="profile-image-header" src="" alt="Foto de Perfil" class="profile-image" style="display: none;" />
-        <i id="profile-icon-default" class="ri-account-circle-fill default-profile-icon"></i>
-    </button>
+    <div class="page-controls">
+        <button id="profile-button" class="profile-icon-container">
+            <img id="profile-image-header" src="" alt="Foto de Perfil" class="profile-image" style="display: none;" />
+            <i id="profile-icon-default" class="ri-account-circle-fill default-profile-icon"></i>
+        </button>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="theme-toggle">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
 
     <div id="profile-modal" class="modal-overlay">
         <div class="modal-content">

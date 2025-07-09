@@ -269,3 +269,29 @@ body.dark-mode .button:disabled {
     color: #555;
     box-shadow: inset 3px 3px 7px var(--shadow-dark), inset -3px -3px 7px var(--shadow-light);
 }
+
+/* --- DARK MODE --- */
+html.dark-mode {
+    --bg-color: #2C2C2C;
+    --text-color: #a1a1a1;
+    --text-strong-color: #e4e4e4;
+    --text-light-color: #888888;
+    --placeholder-color: #888888;
+    --shadow-light: #3a3a3a;
+    --shadow-dark: #1e1e1e;
+    --error-color: #E57373;
+
+    /* Cores de Destaque para o Dark Mode (se você usar) */
+    --accent-color: #3482ff;
+    --accent-text-color: #FFFFFF;
+}
+
+/* Ajustes específicos para botões desabilitados no dark mode, se necessário */
+html.dark-mode .button:disabled {
+    /* Exemplo */
+    background-color: var(--bg-color);
+    color: #555;
+    box-shadow: inset 3px 3px 7px var(--shadow-dark), inset -3px -3px 7px var(--shadow-light);
+}
+
+/* Adapte outras regras específicas do dark mode conforme necessário */

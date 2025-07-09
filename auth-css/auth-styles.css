@@ -1,5 +1,5 @@
 /* auth-styles.css - Estilo Neumórfico */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap)');
 
 /* --- VARIÁVEIS DE COR (TEMA CLARO - NEUTRO) --- */
 :root {
@@ -39,6 +39,7 @@ body, html {
     border-radius: 20px;
     padding: 40px;
     box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 .title {
@@ -63,6 +64,7 @@ body, html {
     box-sizing: border-box;
     box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
     transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 .input:focus {
@@ -86,6 +88,7 @@ body, html {
     cursor: pointer;
     box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
     transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque azul no toque */
 }
 
 .button:hover {
